@@ -13,20 +13,19 @@ import { CurrencyFormatPipe } from '../../../shared/pipes/currency-format.pipe';
 import { DateFormatPipe } from '../../../shared/pipes/date-format.pipe';
 
 @Component({
-  selector: 'app-pending-approvals',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatCardModule,
-    MatButtonModule,
-    MatChipsModule,
-    MatSnackBarModule,
-    MatDialogModule,
-    LoadingSpinnerComponent,
-    CurrencyFormatPipe,
-    DateFormatPipe
-  ],
-  template: `
+    selector: 'app-pending-approvals',
+    imports: [
+        CommonModule,
+        MatCardModule,
+        MatButtonModule,
+        MatChipsModule,
+        MatSnackBarModule,
+        MatDialogModule,
+        LoadingSpinnerComponent,
+        CurrencyFormatPipe,
+        DateFormatPipe
+    ],
+    template: `
     <div class="container">
       <h1>Pending Loan Approvals</h1>
       
@@ -66,7 +65,7 @@ import { DateFormatPipe } from '../../../shared/pipes/date-format.pipe';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .container { padding: 24px; }
     .loans-grid {
       display: grid;

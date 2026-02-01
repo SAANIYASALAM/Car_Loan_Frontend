@@ -12,20 +12,19 @@ import { AuthService } from '../../../core/services/auth.service';
 import { LoginDto } from '../../../core/models/user.model';
 
 @Component({
-  selector: 'app-login',
-  standalone: true,
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    RouterModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatIconModule,
-    MatSnackBarModule
-  ],
-  template: `
+    selector: 'app-login',
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        RouterModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        MatIconModule,
+        MatSnackBarModule
+    ],
+    template: `
     <div class="login-container">
       <mat-card class="login-card">
         <mat-card-header>
@@ -71,7 +70,7 @@ import { LoginDto } from '../../../core/models/user.model';
       </mat-card>
     </div>
   `,
-  styles: [`
+    styles: [`
     .login-container {
       display: flex;
       justify-content: center;

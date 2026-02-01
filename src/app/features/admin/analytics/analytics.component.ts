@@ -5,10 +5,9 @@ import { AdminService } from '../../../core/services/admin.service';
 import { LoadingSpinnerComponent } from '../../../shared/components/loading-spinner/loading-spinner.component';
 
 @Component({
-  selector: 'app-analytics',
-  standalone: true,
-  imports: [CommonModule, MatCardModule, LoadingSpinnerComponent],
-  template: `
+    selector: 'app-analytics',
+    imports: [CommonModule, MatCardModule, LoadingSpinnerComponent],
+    template: `
     <div class="container">
       <h1>Analytics</h1>
       
@@ -35,7 +34,7 @@ import { LoadingSpinnerComponent } from '../../../shared/components/loading-spin
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .container { padding: 24px; }
     .analytics-grid {
       display: grid;

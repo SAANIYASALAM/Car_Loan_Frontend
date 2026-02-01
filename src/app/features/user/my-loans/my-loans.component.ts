@@ -14,20 +14,19 @@ import { CurrencyFormatPipe } from '../../../shared/pipes/currency-format.pipe';
 import { DateFormatPipe } from '../../../shared/pipes/date-format.pipe';
 
 @Component({
-  selector: 'app-my-loans',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatCardModule,
-    MatTableModule,
-    MatChipsModule,
-    MatButtonModule,
-    LoadingSpinnerComponent,
-    CurrencyFormatPipe,
-    DateFormatPipe
-  ],
-  template: `
+    selector: 'app-my-loans',
+    imports: [
+        CommonModule,
+        RouterModule,
+        MatCardModule,
+        MatTableModule,
+        MatChipsModule,
+        MatButtonModule,
+        LoadingSpinnerComponent,
+        CurrencyFormatPipe,
+        DateFormatPipe
+    ],
+    template: `
     <div class="container">
       <h1>My Loans</h1>
       
@@ -71,7 +70,7 @@ import { DateFormatPipe } from '../../../shared/pipes/date-format.pipe';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .container { padding: 24px; }
     .loans-grid {
       display: grid;

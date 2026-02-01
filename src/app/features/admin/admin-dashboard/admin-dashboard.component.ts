@@ -7,16 +7,15 @@ import { LoadingSpinnerComponent } from '../../../shared/components/loading-spin
 import { CurrencyFormatPipe } from '../../../shared/pipes/currency-format.pipe';
 
 @Component({
-  selector: 'app-admin-dashboard',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatCardModule,
-    MatIconModule,
-    LoadingSpinnerComponent,
-    CurrencyFormatPipe
-  ],
-  template: `
+    selector: 'app-admin-dashboard',
+    imports: [
+        CommonModule,
+        MatCardModule,
+        MatIconModule,
+        LoadingSpinnerComponent,
+        CurrencyFormatPipe
+    ],
+    template: `
     <div class="container">
       <h1>Admin Dashboard</h1>
       
@@ -85,7 +84,7 @@ import { CurrencyFormatPipe } from '../../../shared/pipes/currency-format.pipe';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .container { padding: 24px; }
     .stats-grid {
       display: grid;

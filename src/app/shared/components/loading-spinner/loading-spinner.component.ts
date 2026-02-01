@@ -3,16 +3,15 @@ import { CommonModule } from '@angular/common';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
-  selector: 'app-loading-spinner',
-  standalone: true,
-  imports: [CommonModule, MatProgressSpinnerModule],
-  template: `
+    selector: 'app-loading-spinner',
+    imports: [CommonModule, MatProgressSpinnerModule],
+    template: `
     <div class="spinner-container">
       <mat-spinner></mat-spinner>
       <p>Loading...</p>
     </div>
   `,
-  styles: [`
+    styles: [`
     .spinner-container {
       display: flex;
       flex-direction: column;

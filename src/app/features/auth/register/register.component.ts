@@ -12,20 +12,19 @@ import { AuthService } from '../../../core/services/auth.service';
 import { RegisterDto } from '../../../core/models/user.model';
 
 @Component({
-  selector: 'app-register',
-  standalone: true,
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    RouterModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatIconModule,
-    MatSnackBarModule
-  ],
-  template: `
+    selector: 'app-register',
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        RouterModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        MatIconModule,
+        MatSnackBarModule
+    ],
+    template: `
     <div class="register-container">
       <mat-card class="register-card">
         <mat-card-header>
@@ -112,7 +111,7 @@ import { RegisterDto } from '../../../core/models/user.model';
       </mat-card>
     </div>
   `,
-  styles: [`
+    styles: [`
     .register-container {
       display: flex;
       justify-content: center;

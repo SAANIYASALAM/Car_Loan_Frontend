@@ -1,6 +1,10 @@
 # Car Loan Frontend
 
-Angular 17+ frontend application for Car Loan EMI system with ASP.NET Core backend integration.
+Angular 19+ frontend application for Car Loan EMI system with ASP.NET Core backend integration.
+
+## Security Notice
+
+**Latest Update**: Upgraded to Angular 19.2.18 to address critical security vulnerabilities (XSS and XSRF). See [SECURITY_UPDATE.md](./SECURITY_UPDATE.md) for details.
 
 ## Features
 
@@ -23,9 +27,9 @@ Angular 17+ frontend application for Car Loan EMI system with ASP.NET Core backe
 
 ## Tech Stack
 
-- **Angular 17+** with standalone components
-- **Angular Material** for UI components
-- **TypeScript** (strict mode)
+- **Angular 19.2.18** with standalone components (upgraded for security fixes)
+- **Angular Material 19** for UI components
+- **TypeScript 5.8** (strict mode)
 - **Chart.js** for data visualization
 - **RxJS** for reactive programming
 - **Lazy loading** for optimized performance

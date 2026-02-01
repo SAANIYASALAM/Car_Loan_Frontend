@@ -11,18 +11,17 @@ import { CurrencyFormatPipe } from '../../../shared/pipes/currency-format.pipe';
 import { DateFormatPipe } from '../../../shared/pipes/date-format.pipe';
 
 @Component({
-  selector: 'app-all-loans',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatCardModule,
-    MatTableModule,
-    MatChipsModule,
-    LoadingSpinnerComponent,
-    CurrencyFormatPipe,
-    DateFormatPipe
-  ],
-  template: `
+    selector: 'app-all-loans',
+    imports: [
+        CommonModule,
+        MatCardModule,
+        MatTableModule,
+        MatChipsModule,
+        LoadingSpinnerComponent,
+        CurrencyFormatPipe,
+        DateFormatPipe
+    ],
+    template: `
     <div class="container">
       <h1>All Loans</h1>
       
@@ -75,7 +74,7 @@ import { DateFormatPipe } from '../../../shared/pipes/date-format.pipe';
       </mat-card>
     </div>
   `,
-  styles: [`
+    styles: [`
     .container { padding: 24px; }
     table { width: 100%; }
   `]

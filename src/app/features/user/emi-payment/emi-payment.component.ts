@@ -12,19 +12,18 @@ import { EmiService } from '../../../core/services/emi.service';
 import { EmiPaymentDto } from '../../../core/models/emi.model';
 
 @Component({
-  selector: 'app-emi-payment',
-  standalone: true,
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    MatButtonModule,
-    MatSnackBarModule
-  ],
-  template: `
+    selector: 'app-emi-payment',
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule,
+        MatButtonModule,
+        MatSnackBarModule
+    ],
+    template: `
     <div class="container">
       <mat-card>
         <mat-card-header>
@@ -66,7 +65,7 @@ import { EmiPaymentDto } from '../../../core/models/emi.model';
       </mat-card>
     </div>
   `,
-  styles: [`
+    styles: [`
     .container { padding: 24px; max-width: 600px; margin: 0 auto; }
     .full-width { width: 100%; margin-bottom: 16px; }
   `]

@@ -2,10 +2,9 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-footer',
-  standalone: true,
-  imports: [CommonModule],
-  template: `
+    selector: 'app-footer',
+    imports: [CommonModule],
+    template: `
     <footer>
       <div class="footer-content">
         <p>&copy; 2026 Car Loan EMI System. All rights reserved.</p>
@@ -13,7 +12,7 @@ import { CommonModule } from '@angular/common';
       </div>
     </footer>
   `,
-  styles: [`
+    styles: [`
     footer {
       background-color: #333;
       color: white;

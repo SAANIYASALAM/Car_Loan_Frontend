@@ -12,19 +12,18 @@ import { UserService } from '../../../core/services/user.service';
 import { User, UpdateUserDto } from '../../../core/models/user.model';
 
 @Component({
-  selector: 'app-profile',
-  standalone: true,
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    MatButtonModule,
-    MatSnackBarModule
-  ],
-  template: `
+    selector: 'app-profile',
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule,
+        MatButtonModule,
+        MatSnackBarModule
+    ],
+    template: `
     <div class="container">
       <mat-card>
         <mat-card-header>
@@ -65,7 +64,7 @@ import { User, UpdateUserDto } from '../../../core/models/user.model';
       </mat-card>
     </div>
   `,
-  styles: [`
+    styles: [`
     .container { padding: 24px; max-width: 600px; margin: 0 auto; }
     .full-width { width: 100%; margin-bottom: 16px; }
   `]

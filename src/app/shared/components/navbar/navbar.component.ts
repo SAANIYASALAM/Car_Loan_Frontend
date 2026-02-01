@@ -10,18 +10,17 @@ import { AuthService } from '../../../core/services/auth.service';
 import { User } from '../../../core/models/user.model';
 
 @Component({
-  selector: 'app-navbar',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
-    MatMenuModule,
-    MatDividerModule
-  ],
-  template: `
+    selector: 'app-navbar',
+    imports: [
+        CommonModule,
+        RouterModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatIconModule,
+        MatMenuModule,
+        MatDividerModule
+    ],
+    template: `
     <mat-toolbar color="primary">
       <span class="logo" routerLink="/">Car Loan EMI</span>
       <span class="spacer"></span>
@@ -62,7 +61,7 @@ import { User } from '../../../core/models/user.model';
       </ng-container>
     </mat-toolbar>
   `,
-  styles: [`
+    styles: [`
     .logo {
       font-size: 1.5rem;
       font-weight: bold;

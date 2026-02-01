@@ -14,19 +14,18 @@ import { LoadingSpinnerComponent } from '../../../shared/components/loading-spin
 import { CurrencyFormatPipe } from '../../../shared/pipes/currency-format.pipe';
 
 @Component({
-  selector: 'app-user-dashboard',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatCardModule,
-    MatButtonModule,
-    MatIconModule,
-    MatProgressBarModule,
-    LoadingSpinnerComponent,
-    CurrencyFormatPipe
-  ],
-  template: `
+    selector: 'app-user-dashboard',
+    imports: [
+        CommonModule,
+        RouterModule,
+        MatCardModule,
+        MatButtonModule,
+        MatIconModule,
+        MatProgressBarModule,
+        LoadingSpinnerComponent,
+        CurrencyFormatPipe
+    ],
+    template: `
     <div class="dashboard-container">
       <h1>Welcome, {{ currentUser?.fullName }}!</h1>
       
@@ -113,7 +112,7 @@ import { CurrencyFormatPipe } from '../../../shared/pipes/currency-format.pipe';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .dashboard-container {
       padding: 24px;
     }

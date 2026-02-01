@@ -8,16 +8,15 @@ import { User } from '../../../core/models/user.model';
 import { LoadingSpinnerComponent } from '../../../shared/components/loading-spinner/loading-spinner.component';
 
 @Component({
-  selector: 'app-users-management',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatCardModule,
-    MatTableModule,
-    MatChipsModule,
-    LoadingSpinnerComponent
-  ],
-  template: `
+    selector: 'app-users-management',
+    imports: [
+        CommonModule,
+        MatCardModule,
+        MatTableModule,
+        MatChipsModule,
+        LoadingSpinnerComponent
+    ],
+    template: `
     <div class="container">
       <h1>User Management</h1>
       
@@ -74,7 +73,7 @@ import { LoadingSpinnerComponent } from '../../../shared/components/loading-spin
       </mat-card>
     </div>
   `,
-  styles: [`
+    styles: [`
     .container { padding: 24px; }
     table { width: 100%; }
   `]

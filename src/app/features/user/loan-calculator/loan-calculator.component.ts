@@ -10,18 +10,17 @@ import { EmiCalculationDto } from '../../../core/models/loan.model';
 import { CurrencyFormatPipe } from '../../../shared/pipes/currency-format.pipe';
 
 @Component({
-  selector: 'app-loan-calculator',
-  standalone: true,
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    CurrencyFormatPipe
-  ],
-  template: `
+    selector: 'app-loan-calculator',
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        CurrencyFormatPipe
+    ],
+    template: `
     <div class="container">
       <mat-card>
         <mat-card-header>
@@ -66,7 +65,7 @@ import { CurrencyFormatPipe } from '../../../shared/pipes/currency-format.pipe';
       </mat-card>
     </div>
   `,
-  styles: [`
+    styles: [`
     .container { padding: 24px; max-width: 600px; margin: 0 auto; }
     .full-width { width: 100%; margin-bottom: 16px; }
     .result {

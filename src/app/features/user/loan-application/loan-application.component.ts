@@ -14,19 +14,18 @@ import { LoanApplicationDto, EligibilityCheckDto } from '../../../core/models/lo
 import { CarType, CarTypeLabels } from '../../../core/models/enums';
 
 @Component({
-  selector: 'app-loan-application',
-  standalone: true,
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    MatButtonModule,
-    MatSnackBarModule
-  ],
-  template: `
+    selector: 'app-loan-application',
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule,
+        MatButtonModule,
+        MatSnackBarModule
+    ],
+    template: `
     <div class="container">
       <mat-card>
         <mat-card-header>
@@ -105,7 +104,7 @@ import { CarType, CarTypeLabels } from '../../../core/models/enums';
       </mat-card>
     </div>
   `,
-  styles: [`
+    styles: [`
     .container { padding: 24px; }
     .full-width { width: 100%; margin-bottom: 16px; }
     .actions { display: flex; gap: 16px; margin-top: 16px; }
