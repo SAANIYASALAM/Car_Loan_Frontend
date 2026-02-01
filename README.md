@@ -188,6 +188,24 @@ The application uses JWT-based authentication with the following features:
 - Role-based access control (User/Admin)
 - Automatic session management
 
+## Troubleshooting
+
+### Connection Issues
+If you encounter connection errors (ERR_EMPTY_RESPONSE, status 0), see **[CORS_GUIDE.md](./CORS_GUIDE.md)** for detailed troubleshooting steps.
+
+### 500 Internal Server Errors
+If you get 500 Internal Server Errors from the backend:
+- **[QUICK_FIX_500_ERRORS.md](./QUICK_FIX_500_ERRORS.md)** - Quick diagnosis and common fixes
+- **[TROUBLESHOOTING_500_ERRORS.md](./TROUBLESHOOTING_500_ERRORS.md)** - Comprehensive troubleshooting guide
+
+The frontend now provides detailed error logging in the browser console to help debug backend issues. Press F12 to open DevTools and check the Console tab for detailed error information.
+
+### General Issues
+- **Backend not running**: Ensure the ASP.NET Core backend is running on http://localhost:7041
+- **Database issues**: Check if the database is running and migrations are applied
+- **CORS errors**: See CORS_GUIDE.md
+- **Build errors**: Try `npm install` to reinstall dependencies
+
 ## Contributing
 
 1. Create a feature branch

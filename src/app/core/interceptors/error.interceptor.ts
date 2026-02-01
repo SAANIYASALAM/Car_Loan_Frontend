@@ -33,7 +33,48 @@ export const errorInterceptor: HttpInterceptorFn = (req, next) => {
         } else if (error.status === 404) {
           errorMessage = 'Resource not found.';
         } else if (error.status === 500) {
-          errorMessage = 'Internal server error. Please try again later.';
+          // Internal server error - provide detailed logging
+          const endpoint = `${req.method} ${req.url}`;
+          const backendMessage = error.error?.message || error.error?.error || error.error?.title;
+          const backendDetails = error.error?.details || error.error?.errors;
+          
+          // Detailed console logging for debugging
+          console.group('🔴 500 Internal Server Error');
+          console.error('Endpoint:', endpoint);
+          console.error('Status:', error.status, error.statusText);
+          console.error('Timestamp:', new Date().toISOString());
+          
+          if (backendMessage) {
+            console.error('Backend Error Message:', backendMessage);
+          }
+          
+          if (backendDetails) {
+            console.error('Backend Error Details:', backendDetails);
+          }
+          
+          if (error.error) {
+            console.error('Full Backend Response:', error.error);
+          }
+          
+          console.error('Full Error Object:', error);
+          console.groupEnd();
+          
+          // Create user-friendly error message with details
+          errorMessage = `Internal server error at ${endpoint}.`;
+          
+          if (backendMessage) {
+            errorMessage += `\n\nError: ${backendMessage}`;
+          }
+          
+          if (backendDetails) {
+            if (typeof backendDetails === 'string') {
+              errorMessage += `\n\nDetails: ${backendDetails}`;
+            } else if (typeof backendDetails === 'object') {
+              errorMessage += `\n\nDetails: ${JSON.stringify(backendDetails, null, 2)}`;
+            }
+          }
+          
+          errorMessage += '\n\nCheck the browser console for more details.';
         } else if (error.error?.message) {
           errorMessage = error.error.message;
         } else {
