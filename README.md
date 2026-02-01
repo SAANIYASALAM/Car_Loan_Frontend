@@ -70,12 +70,13 @@ npm install
 
 ### 2. Configure Backend API
 
-Update the API URL in the environment files:
+The application is configured to connect to the ASP.NET Core backend at:
 
+**Default API URL**: `http://localhost:7041/api`
+
+To change the backend URL, update the environment files:
 - `src/environments/environment.ts` (development)
 - `src/environments/environment.prod.ts` (production)
-
-Default API URL: `http://localhost:5000/api`
 
 ### 3. Development Server
 
