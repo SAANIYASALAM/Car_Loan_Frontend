@@ -17,7 +17,13 @@ export const errorInterceptor: HttpInterceptorFn = (req, next) => {
         errorMessage = `Error: ${error.error.message}`;
       } else {
         // Server-side error
-        if (error.status === 401) {
+        if (error.status === 0) {
+          // Network error or CORS issue
+          errorMessage = 'Cannot connect to the server. Please ensure:\n' +
+            '1. The backend server is running on http://localhost:7041\n' +
+            '2. CORS is properly configured on the backend\n' +
+            '3. The Angular dev server is running with proxy configuration';
+        } else if (error.status === 401) {
           // Unauthorized - logout and redirect to login
           authService.logout();
           router.navigate(['/auth/login']);

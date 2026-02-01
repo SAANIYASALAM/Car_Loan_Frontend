@@ -70,17 +70,25 @@ npm install
 
 ### 2. Configure Backend API
 
-The application is configured to connect to the ASP.NET Core backend at:
+The application uses a **proxy configuration** to connect to the ASP.NET Core backend, avoiding CORS issues during development.
 
-**Default API URL**: `http://localhost:7041/api`
+**Backend URL**: `http://localhost:7041/api`
 
-To change the backend URL, update the environment files:
-- `src/environments/environment.ts` (development)
-- `src/environments/environment.prod.ts` (production)
+The proxy is configured in `proxy.conf.json` and automatically forwards all `/api/*` requests from `http://localhost:4200/api/*` to `http://localhost:7041/api/*`.
+
+#### Important Notes:
+- The development environment (`environment.ts`) uses relative URL: `apiUrl: '/api'`
+- The proxy handles forwarding to the actual backend
+- **Ensure the backend is running on port 7041** before starting the frontend
+
+#### CORS Troubleshooting
+If you encounter connection errors (ERR_EMPTY_RESPONSE), see **[CORS_GUIDE.md](./CORS_GUIDE.md)** for detailed troubleshooting steps.
 
 ### 3. Development Server
 
-Run the development server:
+**Important**: Make sure the backend server is running on `http://localhost:7041` first!
+
+Then start the development server:
 
 ```bash
 npm start
@@ -88,7 +96,7 @@ npm start
 ng serve
 ```
 
-Navigate to `http://localhost:4200/`. The application will automatically reload when you change source files.
+The proxy will automatically forward API requests to the backend. Navigate to `http://localhost:4200/`. The application will automatically reload when you change source files.
 
 ### 4. Build for Production
 
