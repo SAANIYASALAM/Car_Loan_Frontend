@@ -1,9 +1,7 @@
-# Car Loan EMI Frontend
+# Car Loan Frontend
 
-Angular frontend application for the Car Loan EMI system.
+Angular frontend application for Car Loan EMI system.
 
-## Setup
+## Setup Instructions
 
-Frontend application is being created...
-
-This will integrate with the backend at: https://github.com/SAANIYASALAM/Car_Loan-Emi_Backend
+Coming soon...
